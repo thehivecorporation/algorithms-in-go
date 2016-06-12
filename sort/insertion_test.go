@@ -370,3 +370,7 @@ func BenchmarkInsertionUint8(b *testing.B) {
 
 	InsertionUint8(list)
 }
+
+func BenchmarkHello(b *testing.B) {
+	hello(b.N)
+}

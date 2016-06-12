@@ -2,300 +2,362 @@ package sort
 
 func InsertionUint8(u []uint8) []uint8 {
 
-	newList := make([]uint8, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]uint8, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b uint8) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionUint16(u []uint16) []uint16 {
 
-	newList := make([]uint16, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]uint16, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b uint16) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionUint32(u []uint32) []uint32 {
 
-	newList := make([]uint32, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]uint32, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b uint32) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionUint64(u []uint64) []uint64 {
 
-	newList := make([]uint64, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]uint64, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b uint64) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionInt8(u []int8) []int8 {
 
-	newList := make([]int8, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]int8, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b int8) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionInt16(u []int16) []int16 {
 
-	newList := make([]int16, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]int16, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b int16) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionInt32(u []int32) []int32 {
 
-	newList := make([]int32, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]int32, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b int32) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionInt64(u []int64) []int64 {
 
-	newList := make([]int64, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]int64, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b int64) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionFloat32(u []float32) []float32 {
 
-	newList := make([]float32, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]float32, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b float32) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionFloat64(u []float64) []float64 {
 
-	newList := make([]float64, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]float64, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b float64) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionByte(u []byte) []byte {
 
-	newList := make([]byte, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]byte, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b byte) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionRune(u []rune) []rune {
 
-	newList := make([]rune, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]rune, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b rune) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionUint(u []uint) []uint {
 
-	newList := make([]uint, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
+	newL := make([]uint, len(u))
+	copy(newL, u)
 
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b uint) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionInt(u []int) []int {
-	newList := make([]int, len(u))
-	copy(newList, u)
+	newL := make([]int, len(u))
+	copy(newL, u)
 
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
-
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b int) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
 }
 
 func InsertionUintptr(u []uintptr) []uintptr {
+	newL := make([]uintptr, len(u))
+	copy(newL, u)
 
-	newList := make([]uintptr, len(u))
-	copy(newList, u)
-	for i := 1; i < len(newList); i++ {
-		val := newList[i]
-
-		for k := i - 1; k >= 0; k-- {
-			prev := newList[k]
-
-			if val < prev {
-				newList[k+1] = prev
-				newList[k] = val
-			}
+	isLess := func(a, b uintptr) bool {
+		if a < b {
+			return true
+		} else {
+			return false
 		}
 	}
 
-	return newList
+	for i := 1; i < len(newL); i++ {
+		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
+			old := newL[j]
+			newL[j] = newL[j-1]
+			newL[j-1] = old
+		}
+	}
+
+	return newL
+}
+
+func hello(n int) int {
+	return n ^ 7
 }
