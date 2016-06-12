@@ -5,217 +5,9 @@ import (
 	"testing"
 )
 
-func TestInsertionInt(t *testing.T) {
-	list := []int{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionInt(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != i {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionUint(t *testing.T) {
-	list := []uint{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionUint(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != uint(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionUintptr(t *testing.T) {
-	list := []uintptr{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionUintptr(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != uintptr(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionRune(t *testing.T) {
-	list := []rune{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionRune(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != rune(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionByte(t *testing.T) {
-	list := []byte{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionByte(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != byte(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionFloat64(t *testing.T) {
-	list := []float64{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionFloat64(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != float64(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionFloat32(t *testing.T) {
-	list := []float32{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionFloat32(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != float32(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionInt64(t *testing.T) {
-	list := []int64{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionInt64(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != int64(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionInt16(t *testing.T) {
-	list := []int16{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionInt16(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != int16(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionInt8(t *testing.T) {
-	list := []int8{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionInt8(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != int8(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionUint64(t *testing.T) {
-	list := []uint64{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionUint64(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != uint64(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionUint32(t *testing.T) {
-	list := []uint32{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionUint32(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != uint32(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionUint16(t *testing.T) {
-	list := []uint16{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionUint16(list)
-
-	if len(res) != len(list) {
-		t.Fatalf("Returned list has a different number of items %d!=%d",
-			len(list), len(res))
-	}
-
-	for i := 0; i < len(list); i++ {
-		if res[i] != uint16(i) {
-			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
-		}
-	}
-}
-
-func TestInsertionUint8(t *testing.T) {
-	list := []uint8{4, 2, 1, 7, 5, 0, 3, 9, 6, 8}
-	res := InsertionUint8(list)
+func TestSelectionUint8(t *testing.T) {
+	list := []uint8{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionUint8(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -229,9 +21,185 @@ func TestInsertionUint8(t *testing.T) {
 	}
 }
 
+func TestSelectionUint16(t *testing.T) {
+	list := []uint16{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionUint16(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != uint16(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionUint32(t *testing.T) {
+	list := []uint32{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionUint32(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != uint32(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionUint64(t *testing.T) {
+	list := []uint64{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionUint64(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != uint64(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionInt8(t *testing.T) {
+	list := []int8{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionInt8(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != int8(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionInt16(t *testing.T) {
+	list := []int16{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionInt16(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != int16(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionInt32(t *testing.T) {
+	list := []int32{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionInt32(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != int32(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionInt64(t *testing.T) {
+	list := []int64{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionInt64(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != int64(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionFloat32(t *testing.T) {
+	list := []float32{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionFloat32(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != float32(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionFloat64(t *testing.T) {
+	list := []float64{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionFloat64(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != float64(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionByte(t *testing.T) {
+	list := []byte{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionByte(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != byte(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+func TestSelectionRune(t *testing.T) {
+	list := []rune{4, 2, 1, 7, 3, 0, 5, 6}
+	res := SelectionRune(list)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != rune(i) {
+			t.Fatalf("Insertion algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
 /* -------------------------------------------------------------------------- */
 
-func BenchmarkInsertionInt(b *testing.B) {
+func BenchmarkSelectionInt(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]int, b.N)
 	for i := 0; i < b.N; i++ {
@@ -241,7 +209,7 @@ func BenchmarkInsertionInt(b *testing.B) {
 	InsertionInt(list)
 }
 
-func BenchmarkInsertionUint(b *testing.B) {
+func BenchmarkSelectionUint(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]uint, b.N)
 	for i := 0; i < b.N; i++ {
@@ -251,7 +219,7 @@ func BenchmarkInsertionUint(b *testing.B) {
 	InsertionUint(list)
 }
 
-func BenchmarkInsertionUintptr(b *testing.B) {
+func BenchmarkSelectionUintptr(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]uintptr, b.N)
 	for i := 0; i < b.N; i++ {
@@ -261,7 +229,7 @@ func BenchmarkInsertionUintptr(b *testing.B) {
 	InsertionUintptr(list)
 }
 
-func BenchmarkInsertionRune(b *testing.B) {
+func BenchmarkSelectionRune(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]rune, b.N)
 	for i := 0; i < b.N; i++ {
@@ -271,7 +239,7 @@ func BenchmarkInsertionRune(b *testing.B) {
 	InsertionRune(list)
 }
 
-func BenchmarkInsertionByte(b *testing.B) {
+func BenchmarkSelectionByte(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]byte, b.N)
 	for i := 0; i < b.N; i++ {
@@ -281,7 +249,7 @@ func BenchmarkInsertionByte(b *testing.B) {
 	InsertionByte(list)
 }
 
-func BenchmarkInsertionFloat64(b *testing.B) {
+func BenchmarkSelectionFloat64(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]float64, b.N)
 	for i := 0; i < b.N; i++ {
@@ -291,7 +259,7 @@ func BenchmarkInsertionFloat64(b *testing.B) {
 	InsertionFloat64(list)
 }
 
-func BenchmarkInsertionFloat32(b *testing.B) {
+func BenchmarkSelectionFloat32(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]float32, b.N)
 	for i := 0; i < b.N; i++ {
@@ -301,7 +269,7 @@ func BenchmarkInsertionFloat32(b *testing.B) {
 	InsertionFloat32(list)
 }
 
-func BenchmarkInsertionInt32(b *testing.B) {
+func BenchmarkSelectionInt32(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]int32, b.N)
 	for i := 0; i < b.N; i++ {
@@ -311,7 +279,7 @@ func BenchmarkInsertionInt32(b *testing.B) {
 	InsertionInt32(list)
 }
 
-func BenchmarkInsertionInt16(b *testing.B) {
+func BenchmarkSelectionInt16(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]int16, b.N)
 	for i := 0; i < b.N; i++ {
@@ -321,7 +289,7 @@ func BenchmarkInsertionInt16(b *testing.B) {
 	InsertionInt16(list)
 }
 
-func BenchmarkInsertionInt8(b *testing.B) {
+func BenchmarkSelectionInt8(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]int8, b.N)
 	for i := 0; i < b.N; i++ {
@@ -331,7 +299,7 @@ func BenchmarkInsertionInt8(b *testing.B) {
 	InsertionInt8(list)
 }
 
-func BenchmarkInsertionUint64(b *testing.B) {
+func BenchmarkSelectionUint64(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]uint64, b.N)
 	for i := 0; i < b.N; i++ {
@@ -341,7 +309,7 @@ func BenchmarkInsertionUint64(b *testing.B) {
 	InsertionUint64(list)
 }
 
-func BenchmarkInsertionUint32(b *testing.B) {
+func BenchmarkSelectionUint32(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]uint32, b.N)
 	for i := 0; i < b.N; i++ {
@@ -351,7 +319,7 @@ func BenchmarkInsertionUint32(b *testing.B) {
 	InsertionUint32(list)
 }
 
-func BenchmarkInsertionUint16(b *testing.B) {
+func BenchmarkSelectionUint16(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]uint16, b.N)
 	for i := 0; i < b.N; i++ {
@@ -361,7 +329,7 @@ func BenchmarkInsertionUint16(b *testing.B) {
 	InsertionUint16(list)
 }
 
-func BenchmarkInsertionUint8(b *testing.B) {
+func BenchmarkSelectionUint8(b *testing.B) {
 	rand.Seed(int64(53))
 	list := make([]uint8, b.N)
 	for i := 0; i < b.N; i++ {
