@@ -5,3 +5,11 @@ func SwapInt(u []int, a, b int) {
 	u[b] = u[a]
 	u[a] = old
 }
+
+func isLessInt(a, b int) bool {
+	if a < b {
+		return true
+	} else {
+		return false
+	}
+}
