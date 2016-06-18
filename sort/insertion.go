@@ -1,5 +1,7 @@
 package sort
 
+import "github.com/sayden/algorithms-in-go/common"
+
 func InsertionUint8(u []uint8) []uint8 {
 
 	newL := make([]uint8, len(u))
@@ -326,9 +328,7 @@ func InsertionInt(u []int) []int {
 
 	for i := 1; i < len(newL); i++ {
 		for j := i; j > 0 && isLess(newL[j], newL[j-1]); j-- {
-			old := newL[j]
-			newL[j] = newL[j-1]
-			newL[j-1] = old
+			common.SwapInt(newL, j, j-1)
 		}
 	}
 
