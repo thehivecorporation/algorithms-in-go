@@ -1,6 +1,6 @@
 package graph
 
-var result node
+var Result node
 
 func depthFirstSearch(n node, id int) node{
 	if(id!=n.id) {
@@ -11,12 +11,12 @@ func depthFirstSearch(n node, id int) node{
 					depthFirstSearch(*n.children[i], id)
 				}
 			} else {
-				result = *n.children[i]
+				Result = *n.children[i]
 				break
 			}
 		}
 	} else {
-		result = n
+		Result = n
 	}
-	return result
+	return Result
 }

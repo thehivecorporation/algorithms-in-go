@@ -1,4 +1,4 @@
-package graph
+package common
 
 type node struct {
 	id int
