@@ -1,10 +1,9 @@
 package graph
 
 import (
-	"github.com/GaizkaRubio/algorithms-in-go/common"
+	"github.com/GaizkaRubio/algorithms-in-go/common/node"
 	"testing"
 )
-
 
 func TestBreadthFirstSearch(t *testing.T) {
 	var nod5 node = node{5, false, nil}
