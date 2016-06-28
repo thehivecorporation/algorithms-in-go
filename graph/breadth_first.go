@@ -1,16 +1,24 @@
 package graph
 
-var Result node
-var cola []*node = make([]*node, 0)
+import "../common"
 
-func breadthFirstSearch(n node, id int) node{
+var result common.Node
+var cola = common.NewQueue(1)
 
-	//encolamos root
-	//mientras la cola este vacia
-	//sacamos
-	//comprobamos id
-	//encolamos hijos
-	return Result
+func breadthFirstSearch(n common.Node, id int) common.Node{
+	cola.Push(n)
+	for (cola.Size()>0) {
+		nod := cola.Pop()
+		if(nod.Id != id) {
+			for i := 0; i < len(nod.Children); i++ {
+				cola.Push(nod.Children[i])
+			}
+		} else {
+			result = nod
+			break
+		}
+	}
+	return result
 }
 
 

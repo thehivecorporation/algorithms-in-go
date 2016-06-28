@@ -2,17 +2,25 @@ package common
 
 // Queue is a basic FIFO queue based on a circular list that resizes as needed.
 type Queue struct {
-	nodes []*node
+	nodes []*Node
 	size  int
 	head  int
 	tail  int
 	count int
 }
 
+// NewQueue returns a new queue with the given initial size.
+func NewQueue(size int) *Queue {
+	return &Queue{
+		nodes: make([]*Node, size),
+		size:  size,
+	}
+}
+
 // Push adds a node to the queue.
-func (q *Queue) Push(n *node) {
+func (q *Queue) Push(n *Node) {
 	if q.head == q.tail && q.count > 0 {
-		nodes := make([]*node, len(q.nodes)+q.size)
+		nodes := make([]*Node, len(q.nodes)+q.size)
 		copy(nodes, q.nodes[q.head:])
 		copy(nodes[len(q.nodes)-q.head:], q.nodes[:q.head])
 		q.head = 0
@@ -25,7 +33,7 @@ func (q *Queue) Push(n *node) {
 }
 
 // Pop removes and returns a node from the queue in first to last order.
-func (q *Queue) Pop() *node {
+func (q *Queue) Pop() *Node {
 	if q.count == 0 {
 		return nil
 	}
@@ -35,3 +43,6 @@ func (q *Queue) Pop() *node {
 	return node
 }
 
+func (q Queue) Size() int {
+	return q.size
+}

@@ -1,7 +1,8 @@
 package common
 
-type node struct {
-	id int
-	visited bool
-	children []*node
+type Node struct {
+	Id int
+	Visited bool
+	Children []*Node
+
 }
