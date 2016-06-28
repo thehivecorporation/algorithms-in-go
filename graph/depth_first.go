@@ -1,17 +1,19 @@
 package graph
 
-var Result node
+import "github.com/GaizkaRubio/algorithms-in-go/common"
 
-func depthFirstSearch(n node, id int) node{
-	if(id!=n.id) {
-		for i := 0; i < len(n.children); i++ {
-			if (n.children[i].id != id) {
-				if (n.children[i].visited == false) {
-					n.children[i].visited = true
-					depthFirstSearch(*n.children[i], id)
+var Result common.Node
+
+func depthFirstSearch(n common.Node, id int) common.Node{
+	if(id!=n.Id) {
+		for i := 0; i < len(n.Children); i++ {
+			if (n.Children[i].Id != id) {
+				if (n.Children[i].Visited == false) {
+					n.Children[i].Visited = true
+					depthFirstSearch(*n.Children[i], id)
 				}
 			} else {
-				Result = *n.children[i]
+				Result = *n.Children[i]
 				break
 			}
 		}

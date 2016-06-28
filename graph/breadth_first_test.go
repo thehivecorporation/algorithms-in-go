@@ -1,7 +1,7 @@
 package graph
 
 import (
-	"../common"
+	"github.com/GaizkaRubio/algorithms-in-go/common"
 	"testing"
 )
 
@@ -12,5 +12,5 @@ func TestBreadthFirstSearch(t *testing.T) {
 	var nod2 common.Node = common.Node{2, false, []*common.Node{&nod4, &nod5}}
 	var nod1 common.Node = common.Node{1, false, []*common.Node{&nod2, &nod3}}
 
-	println(breadthFirstSearch(nod1, 2))
+	println(breadthFirstSearch(nod1, 1).Id)
 }
