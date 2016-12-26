@@ -84,7 +84,7 @@ func Heap{{.TypeName}}(u []{{.Type}}) []{{.Type}} {
 var heapTestTmpl string = `
 func TestHeap{{.TypeName}}(t *testing.T) {
 	list := []{{.Type}}{4, 2, 1, 3, 0}
-	res := heap{{.TypeName}}(list)
+	res := Heap{{.TypeName}}(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",

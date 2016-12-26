@@ -1,4 +1,4 @@
-package common
+package graph
 
 // Queue is a basic FIFO queue based on a circular list that resizes as needed.
 type Queue struct {

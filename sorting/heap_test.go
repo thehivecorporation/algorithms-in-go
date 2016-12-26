@@ -6,7 +6,7 @@ import "testing"
 
 func TestHeapUint(t *testing.T) {
 	list := []uint{4, 2, 1, 3, 0}
-	res := heapUint(list)
+	res := HeapUint(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -22,7 +22,7 @@ func TestHeapUint(t *testing.T) {
 
 func TestHeapUint8(t *testing.T) {
 	list := []uint8{4, 2, 1, 3, 0}
-	res := heapUint8(list)
+	res := HeapUint8(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -38,7 +38,7 @@ func TestHeapUint8(t *testing.T) {
 
 func TestHeapUint16(t *testing.T) {
 	list := []uint16{4, 2, 1, 3, 0}
-	res := heapUint16(list)
+	res := HeapUint16(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -54,7 +54,7 @@ func TestHeapUint16(t *testing.T) {
 
 func TestHeapUint32(t *testing.T) {
 	list := []uint32{4, 2, 1, 3, 0}
-	res := heapUint32(list)
+	res := HeapUint32(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -70,7 +70,7 @@ func TestHeapUint32(t *testing.T) {
 
 func TestHeapUint64(t *testing.T) {
 	list := []uint64{4, 2, 1, 3, 0}
-	res := heapUint64(list)
+	res := HeapUint64(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -86,7 +86,7 @@ func TestHeapUint64(t *testing.T) {
 
 func TestHeapInt(t *testing.T) {
 	list := []int{4, 2, 1, 3, 0}
-	res := heapInt(list)
+	res := HeapInt(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -102,7 +102,7 @@ func TestHeapInt(t *testing.T) {
 
 func TestHeapInt8(t *testing.T) {
 	list := []int8{4, 2, 1, 3, 0}
-	res := heapInt8(list)
+	res := HeapInt8(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -118,7 +118,7 @@ func TestHeapInt8(t *testing.T) {
 
 func TestHeapInt16(t *testing.T) {
 	list := []int16{4, 2, 1, 3, 0}
-	res := heapInt16(list)
+	res := HeapInt16(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -134,7 +134,7 @@ func TestHeapInt16(t *testing.T) {
 
 func TestHeapInt32(t *testing.T) {
 	list := []int32{4, 2, 1, 3, 0}
-	res := heapInt32(list)
+	res := HeapInt32(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -150,7 +150,7 @@ func TestHeapInt32(t *testing.T) {
 
 func TestHeapInt64(t *testing.T) {
 	list := []int64{4, 2, 1, 3, 0}
-	res := heapInt64(list)
+	res := HeapInt64(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -166,7 +166,7 @@ func TestHeapInt64(t *testing.T) {
 
 func TestHeapFloat32(t *testing.T) {
 	list := []float32{4, 2, 1, 3, 0}
-	res := heapFloat32(list)
+	res := HeapFloat32(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -182,7 +182,7 @@ func TestHeapFloat32(t *testing.T) {
 
 func TestHeapFloat64(t *testing.T) {
 	list := []float64{4, 2, 1, 3, 0}
-	res := heapFloat64(list)
+	res := HeapFloat64(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -198,7 +198,7 @@ func TestHeapFloat64(t *testing.T) {
 
 func TestHeapByte(t *testing.T) {
 	list := []byte{4, 2, 1, 3, 0}
-	res := heapByte(list)
+	res := HeapByte(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -214,7 +214,7 @@ func TestHeapByte(t *testing.T) {
 
 func TestHeapRune(t *testing.T) {
 	list := []rune{4, 2, 1, 3, 0}
-	res := heapRune(list)
+	res := HeapRune(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",
@@ -230,7 +230,7 @@ func TestHeapRune(t *testing.T) {
 
 func TestHeapUintptr(t *testing.T) {
 	list := []uintptr{4, 2, 1, 3, 0}
-	res := heapUintptr(list)
+	res := HeapUintptr(list)
 
 	if len(res) != len(list) {
 		t.Fatalf("Returned list has a different number of items %d!=%d",

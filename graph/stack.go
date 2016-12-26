@@ -1,4 +1,4 @@
-package common
+package graph
 
 // NewStack returns a new stack.
 func NewStack() *Stack {

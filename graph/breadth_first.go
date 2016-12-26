@@ -1,17 +1,16 @@
 package graph
 
-import "github.com/GaizkaRubio/algorithms-in-go/common"
+func BreadthFirstSearch(n Node, id string) Node {
+	var result Node
+	queue := NewQueue(1)
 
-var result common.Node
-var cola = common.NewQueue(1)
+	queue.Push(&n)
 
-func breadthFirstSearch(n common.Node, id int) common.Node{
-	cola.Push(&n)
-	for (cola.Size()>0) {
-		nod := cola.Pop()
-		if(nod.Id != id) {
+	for queue.Size() > 0 {
+		nod := queue.Pop()
+		if nod.Id != id {
 			for i := 0; i < len(nod.Children); i++ {
-				cola.Push(nod.Children[i])
+				queue.Push(nod.Children[i])
 			}
 		} else {
 			result = *nod
