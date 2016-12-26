@@ -1,4 +1,4 @@
-package sort
+package main
 
 func ShellUint8(u []uint8, j int) (newL []uint8) {
 	if j == 0 {
@@ -28,16 +28,16 @@ func ShellUint8(u []uint8, j int) (newL []uint8) {
 	return
 }
 
-func ShellInt(u []int, jump int) (newL []int) {
-	if jump == 0 {
-		jump = 4
+var shellImpl string = `func Shell{{.TypeName}}(u []{{.Type}}, j int) (newL []{{.Type}}) {
+	if j == 0 {
+		j = 4
 	}
 
-	newL = make([]int, len(u))
+	newL = make([]{{.Type}}, len(u))
 	copy(newL, u)
 
 	//Interval of 4
-	interval := jump << 1
+	interval := j << 1
 
 	for interval>>1 > 0 {
 		interval = interval >> 1
@@ -55,3 +55,23 @@ func ShellInt(u []int, jump int) (newL []int) {
 
 	return
 }
+
+`
+
+var shellTest string = `func TestShell{{.TypeName}}(t *testing.T) {
+	list := []{{.Type}}{4, 2, 1, 3, 0, 9, 6, 8, 7, 5}
+	res := Shell{{.TypeName}}(list, 0)
+
+	if len(res) != len(list) {
+		t.Fatalf("Returned list has a different number of items %d!=%d",
+			len(list), len(res))
+	}
+
+	for i := 0; i < len(list); i++ {
+		if res[i] != {{.Type}}(i) {
+			t.Fatalf("Shell algorithm isn't correct: %v\n", res)
+		}
+	}
+}
+
+`
